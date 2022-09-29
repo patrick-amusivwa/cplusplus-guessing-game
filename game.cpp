@@ -10,7 +10,7 @@ int main()
 
     while (secretnumber != guess && !outofguesses)
     {
-        if(guesscount<guesslimit)
+        if (guesscount < guesslimit)
         {
             cout << "Enter guess: ";
             cin >> guess;
@@ -21,8 +21,6 @@ int main()
             outofguesses = true;
             break;
         }
-        
-
     }
     if (outofguesses)
     {
@@ -32,8 +30,6 @@ int main()
     {
         cout << "You win!";
     }
-   
 
-
-return 0;
+    return 0;
 }
