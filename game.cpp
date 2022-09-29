@@ -8,14 +8,31 @@ int main()
     int guesslimit = 5;
     bool outofguesses = false;
 
-    while (secretnumber != guess)
+    while (secretnumber != guess && !outofguesses)
     {
-        cout << "Guess the number: ";
-        cin >> guess;
-        ++guesscount;
+        if(guesscount<guesslimit)
+        {
+            cout << "Enter guess: ";
+            cin >> guess;
+            guesscount++;
+        }
+        else
+        {
+            outofguesses = true;
+            break;
+        }
+        
 
     }
-    cout << "You win!";
+    if (outofguesses)
+    {
+        cout << "You ran out of guesses !";
+    }
+    else
+    {
+        cout << "You win!";
+    }
+   
 
 
 return 0;
